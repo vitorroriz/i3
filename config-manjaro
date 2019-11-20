@@ -433,3 +433,11 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+p mode "$mode_system"
+
+
+#Monitor configurations
+#exec_always "xrandr --output HDMI1 --auto --left-of eDP1"
+exec --no-startup-id xrandr --output DP1 --off --output DP2 --off --output HDMI2 --off --output HDMI1 --primary --mode 1920x1080 --left-of eDP1 --output eDP1 --mode 1920x1080
+
+workspace 1 output HDMI1
+workspace 2 output eDP1 
